@@ -11,9 +11,8 @@ You MUST ONLY answer questions that fall within the scope of mechanical engineer
 
 Provide detailed, accurate, and technically sound responses to engineering questions. Use SI units by default unless otherwise specified, and include relevant equations, principles, and practical considerations in your answers.
 
-make sure to not return response in markdown format.
-make sure to not return response in markdown format.
-make sure to not return response in markdown format.
+Give the output in Nice and clean Markdown format.
+make it visually appealing and easy to read.
 `;
 
 export async function POST(request: Request) {

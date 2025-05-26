@@ -123,3 +123,22 @@
   @apply bg-secondary text-secondary-foreground mr-auto;
   border-bottom-left-radius: 0;
 }
+
+/* Super thin scrollbar style for sidebar and scrollable areas */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--border)) transparent;
+}

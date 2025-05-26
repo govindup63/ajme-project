@@ -6,7 +6,7 @@ import { Settings, Send, Loader2, ChevronLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Card } from '@/components/ui/card';
-import { ChatMessage } from '@/components/chat/chat-message';
+import { ChatMessage, ChatLoader } from '@/components/chat/chat-message';
 import { useToast } from '@/hooks/use-toast';
 import { Message } from '@/types/chat';
 
@@ -103,8 +103,8 @@ export default function ChatPage() {
       </header>
       
       {/* Chat container */}
-      <main className="flex-1 max-w-5xl w-full mx-auto p-4 md:p-6">
-        <Card className="h-[calc(100vh-13rem)] flex flex-col border-border/40 bg-card/50 backdrop-blur-sm shadow-sm">
+      <main className="flex-1 max-w-6xl w-full mx-auto p-4 md:p-10">
+        <Card className="h-[calc(100vh-7rem)] flex flex-col border-border/40 bg-card/50 backdrop-blur-sm shadow-sm max-w-4xl mx-auto">
           {/* Messages area */}
           <div className="flex-1 overflow-y-auto p-4 space-y-4">
             {messages.map((message, index) => (
@@ -113,6 +113,7 @@ export default function ChatPage() {
                 message={message} 
               />
             ))}
+            {isLoading && <ChatLoader />}
             <div ref={messagesEndRef} />
           </div>
           
